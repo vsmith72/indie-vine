@@ -1,49 +1,26 @@
-        <!--  footer contains widgets -->
-        <footer>
-            <div class="cb-5"><!-- colorblock 5 - About ME -->
-                <aside class="about-me sb-footer-1"><?php get_sidebar('sb-footer-1'); ?></aside>
-            </div><!-- end colorblock -->
-                <div class="cb-6"> <!-- colorblock 6 - footer-sb-2 -->
-                    <!-- sb-footer-2 - social banners -->
-                    <div class="sb-footer-2"><?php get_sidebar('sb-footer-2'); ?></div>
-                    <!-- sb-footer 3 - subscribe -->
-                    <div class="sb-footer-3"><?php get_sidebar('sb-footer-3'); ?></div>
-                    <!-- this will clear the float -->
-                    <div class="clear"></div><!-- end clear -->
-                </div><!-- end colorblock -->
-                <div class="cb-7"> <!-- colorblock 7 - footer-sb-2 -->
-                    <!-- sb-footer-3 - instagram or pintrest feed -->
-                    <div class="sb-footer-4"><?php get_sidebar('sb-footer-4'); ?></div><!-- end sidebar footer -->
-                </div><!-- end colorblock -->
-                <!-- colorblock 8 footer nav -->
-                <div class="cb-8">
-                    <!-- nav footer  this the category menu   -->
-                    <nav class="nav-footer">
-                        <ul class="nav-footer">
-                                <li class="nav-footer"><a href="#starthere">Start Here</a></li>
-                                <li class="nav-footer"><a href="#cards">Handmade Cards</a></li>
-                                <li class="nav-footer"><a href="#diy">DIY Home Decor</a></li>
-                                <li class="nav-footer"><a href="#fav"><span class="nav-footer">Love This!</span></a></li>
-                            </ul>
-                    </nav><!-- end footer menu -->
-                </div><!-- end colorblock 8 footer nav -->
-                <div class="cb-9"> <!-- colorblock 8 - copyright -->
-                    <!-- copyright info and link to disclosure statement -->
-                    <div class="copyright">
-                        <p>Universal Theme &#169; Vanessa Smith <?php echo comicpress_copyright(); ?>. &#124; Click <a href="#top">here</a> for disclaimer information.</p>
-                    </div><!-- end copyright -->
-                    <!-- social footer -->
-                    <div class="social-footer">
-                        <img src="images/facebook32.png" height="24" width="24" />
-                        <img src="images/pinterest32.png" height="24" width="24" />
-                        <img src="images/instagram32.png" height="24" width="24" />
-                        <img src="images/rss32.png" height="24" width="24" />
-                    </div><!-- end social footer -->
-                    <!-- this will clear the float -->
-                    <div class="clear"></div><!-- end clear -->
-                </div><!-- end colorblock -->
-            </footer><!-- end footer -->
-        </div>
-	</body>
+      <!--  footer -->
+      <footer>
+        <figure class="footer-logo">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="footer logo indie vine" width="100%">
+        </figure>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                               e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                               e.src='https://www.google-analytics.com/analytics.js';
+                               r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+      </script>
+      <?php wp_footer(); ?>
+    </div>
+  </body>
 </html>
 
