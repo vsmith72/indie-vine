@@ -1,0 +1,6 @@
+{
+  "name": "unplugged-site",
+  "dependencies": {
+    "font-awesome-cdn": "~4.5.2"
+  }
+}
