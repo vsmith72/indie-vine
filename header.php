@@ -21,7 +21,6 @@
     <link href="https://fonts.googleapis.com/css?family=Antic|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/bower_components/font-awesome-cdn/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css">
-
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/modernizr-2.8.3.min.js"></script>
     <!--=== TITLE ===-->
     <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
@@ -39,8 +38,10 @@
 
     <!-- Add your site or application content here -->
     <header>
-
       <div id="logo"><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="The Indie Vine" width="100%"></a></div>
+
+      <!-- Navigation ----------------------------------->
+      <!-- TODO -- Make this a dynamic menu -->
       <nav>
         <ul>
           <li>
@@ -61,6 +62,8 @@
       <div class="clear"></div>
 
     </header>
+    <div id="main-content">
+
 <!-- This is the end of the content that will appear at the top every page in the site -->
 <!-- don't forget to close the body tag in the footer.php -->
 

@@ -103,6 +103,59 @@ register_sidebar(array(
 	));
 }
 
+// Register Custom Post Type
+function custom_post_type() {
+
+  $labels = array(
+    'name'                  => _x( 'Reviews', 'Post Type General Name', 'indie_vine' ),
+    'singular_name'         => _x( 'Review', 'Post Type Singular Name', 'indie_vine' ),
+    'menu_name'             => __( 'Reviews', 'indie_vine' ),
+    'name_admin_bar'        => __( 'Reviews', 'indie_vine' ),
+    'archives'              => __( 'Item Archives', 'indie_vine' ),
+    'parent_item_colon'     => __( 'Parent Item:', 'indie_vine' ),
+    'all_items'             => __( 'All Items', 'indie_vine' ),
+    'add_new_item'          => __( 'Add New Item', 'indie_vine' ),
+    'add_new'               => __( 'Add New', 'indie_vine' ),
+    'new_item'              => __( 'New Item', 'indie_vine' ),
+    'edit_item'             => __( 'Edit Item', 'indie_vine' ),
+    'update_item'           => __( 'Update Item', 'indie_vine' ),
+    'view_item'             => __( 'View Item', 'indie_vine' ),
+    'search_items'          => __( 'Search Item', 'indie_vine' ),
+    'not_found'             => __( 'Not found', 'indie_vine' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'indie_vine' ),
+    'featured_image'        => __( 'Featured Image', 'indie_vine' ),
+    'set_featured_image'    => __( 'Set featured image', 'indie_vine' ),
+    'remove_featured_image' => __( 'Remove featured image', 'indie_vine' ),
+    'use_featured_image'    => __( 'Use as featured image', 'indie_vine' ),
+    'insert_into_item'      => __( 'Insert into item', 'indie_vine' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this item', 'indie_vine' ),
+    'items_list'            => __( 'Items list', 'indie_vine' ),
+    'items_list_navigation' => __( 'Items list navigation', 'indie_vine' ),
+    'filter_items_list'     => __( 'Filter items list', 'indie_vine' ),
+  );
+  $args = array(
+    'label'                 => __( 'Review', 'indie_vine' ),
+    'description'           => __( 'Music review post type', 'indie_vine' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+    'taxonomies'            => array( 'category', 'post_tag' ),
+    'hierarchical'          => true,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'page',
+  );
+  register_post_type( 'review', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
 
 // enable threaded comments
 function enable_threaded_comments(){

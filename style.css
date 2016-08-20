@@ -1,2 +1,612 @@
+/* line 18, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/* line 32, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+::selection {
+  background: rgba(153, 53, 239, 0.76);
+  text-shadow: none; }
+
+/* line 42, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0; }
+
+/* line 62, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/* line 70, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 80, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+textarea {
+  resize: vertical; }
+
+/* line 84, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+figure {
+  padding: 0;
+  margin: 0;
+  display: inline-block; }
+
+/* line 94, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.browserupgrade {
+  background: #ccc;
+  color: #000;
+  margin: .2em 0;
+  padding: .2em 0; }
+
+/* line 135, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 139, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+body {
+  background: linear-gradient(to right, #4f1e5a, #b21e49); }
+
+/* line 143, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+a {
+  text-decoration: none;
+  color: #4f1e5a; }
+  /* line 146, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  a:visited {
+    color: #4f1e5a; }
+
+/* line 160, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Antic';
+  margin: 0;
+  padding: 2% 0; }
+
+/* line 174, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+p {
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify; }
+
+/* line 178, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+img {
+  width: 100%;
+  height: auto; }
+
+/* line 182, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+i {
+  padding-right: 10px; }
+
+/* line 185, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+li {
+  list-style: none; }
+
+/* line 191, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+header {
+  width: 96%; }
+
+/* line 195, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+#logo {
+  padding: 2%;
+  margin: 0 auto;
+  width: 99%; }
+
+/* line 203, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+nav {
+  width: 100%;
+  font-family: 'Antic';
+  font-size: 1.25rem;
+  letter-spacing: .15rem; }
+  /* line 208, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  nav ul {
+    margin: 0 auto;
+    width: 96%;
+    margin: auto;
+    list-style: none;
+    padding: 0px;
+    padding-bottom: 5%; }
+    /* line 215, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    nav ul li {
+      border-bottom: thin solid #c9c9c9;
+      text-align: center;
+      padding: 15px 0; }
+      /* line 219, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li:first-child {
+        border-top: thin solid rgba(255, 255, 255, 0.5); }
+      /* line 222, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li i.fa {
+        display: none; }
+      /* line 225, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li a {
+        font-size: 1.125em;
+        text-transform: uppercase;
+        color: #fff; }
+        /* line 229, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+        nav ul li a:visited {
+          color: #fff; }
+  /* line 235, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  nav .subnav {
+    display: none; }
+
+/* line 243, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+#main-content {
+  padding: 2%;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 10%;
+  width: 96%; }
+
+/* line 257, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.top-story {
+  width: 100%; }
+  /* line 260, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .top-story .top-img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0;
+    width: 100%; }
+  /* line 266, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .top-story .top-infov {
+    width: 100%; }
+
+/* line 273, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.sidebar {
+  width: 100%; }
+
+/* line 278, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.sidebar-upcoming,
+.sidebar-faq {
+  display: none;
+  padding-bottom: 6%; }
+
+/* line 282, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.sidebar-upcoming {
+  border-bottom: thin solid #c9c9c9; }
+
+/* line 285, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.newsletter {
+  border-bottom: thin solid #c9c9c9;
+  border-top: thin solid #c9c9c9;
+  padding-bottom: 6.75%; }
+
+/* line 293, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+aside input {
+  width: 100%;
+  margin-bottom: 2%;
+  padding: 2% 0; }
+
+/* line 299, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+aside .btn {
+  width: 100%;
+  padding: 2% 0;
+  border: none;
+  background: linear-gradient(to right, #4f1e5a, #b21e49);
+  font-size: 1.15rem;
+  color: #fff;
+  text-transform: uppercase; }
+
+/* line 313, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.feed {
+  border-top: thin solid #c9c9c9;
+  width: 100%; }
+  /* line 317, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed p {
+    display: none; }
+  /* line 321, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed h2 {
+    padding-bottom: 2%; }
+
+/* line 326, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.feed-item {
+  border-bottom: thin solid #c9c9c9;
+  padding-bottom: 5%; }
+  /* line 330, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item:last-child {
+    border: none; }
+  /* line 333, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item figure {
+    vertical-align: top;
+    display: inline-block; }
+  /* line 338, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item h3 {
+    width: 65%;
+    display: inline-block;
+    padding-top: 0;
+    font-size: 1em; }
+  /* line 345, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item h4 {
+    padding-bottom: 1%;
+    font-size: .75em;
+    text-transform: uppercase; }
+  /* line 350, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item p {
+    margin-top: 0; }
+  /* line 355, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item .feed-img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 30%; }
+
+/* line 365, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.reviews-img,
+.news-img {
+  margin: 0;
+  width: 100%; }
+
+/* line 369, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+ul.feed-meta {
+  padding-left: 0; }
+
+/* line 372, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.feed-meta li {
+  display: inline-block;
+  list-style: none; }
+
+/* line 377, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.byline {
+  text-align: justify; }
+
+/* line 380, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.detail-content {
+  border-bottom: thin solid #c9c9c9; }
+
+/* line 385, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.map-container {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden; }
+  /* line 390, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* line 404, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.team-member {
+  border-bottom: thin solid #c9c9c9;
+  padding: 5%; }
+  /* line 407, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .team-member:last-child {
+    border: none; }
+
+/* line 411, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.team-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+  padding-bottom: 40%;
+  float: left;
+  margin-right: 20px;
+  border: thin solid #ccc; }
+
+/* line 424, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.team-title {
+  margin: 0;
+  font-style: italic; }
+
+/* line 429, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.team-description {
+  display: none; }
+
+/* line 433, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+#team-img-01 {
+  background-image: url("../img/team-jack.png"); }
+
+/* line 436, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+#team-img-02 {
+  background-image: url("../img/team-lana.png"); }
+
+/* line 439, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+#team-img-03 {
+  background-image: url("../img/team-willow.png"); }
+
+/* line 444, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+footer {
+  margin: 0 auto;
+  width: 70%; }
+
+/* line 448, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.footer-logo {
+  width: 100%;
+  padding-top: 5%; }
+
+/* line 461, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.hidden {
+  display: none !important; }
+
+/* line 470, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 488, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* line 501, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.invisible {
+  visibility: hidden; }
+
+/* line 518, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 523, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+.clearfix:after {
+  clear: both; }
+
+@media (min-width: 768px) {
+  /* line 541, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  #logo {
+    width: 40%;
+    float: left; }
+  /* line 547, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  nav {
+    width: 60%;
+    float: right; }
+    /* line 550, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    nav ul li {
+      display: block;
+      float: right;
+      padding: 0 2%;
+      border: none;
+      line-height: 2em;
+      position: relative;
+      top: 16px; }
+      /* line 558, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li:first-child {
+        border: none; }
+  /* line 564, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .clear {
+    clear: both; }
+  /* line 569, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .hero-area {
+    padding-bottom: 5%; }
+    /* line 571, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-story {
+      width: 100%; }
+    /* line 574, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-img {
+      width: 50%;
+      float: left; }
+    /* line 579, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-info {
+      width: 50%;
+      float: right;
+      padding-left: 2%; }
+      /* line 583, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      .hero-area .top-info h1 {
+        font-size: 1.85em; }
+  /* line 591, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .sidebar {
+    width: 40%;
+    float: right; }
+  /* line 597, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .detail-newsletter input[type='email'] {
+    width: 60%; }
+  /* line 600, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .detail-newsletter input[type='submit'] {
+    width: 38%; }
+  /* line 606, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .newsletter,
+  .sidebar-upcoming,
+  .sidebar-faq {
+    display: block;
+    padding-left: 3%; }
+  /* line 612, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed {
+    border-right: thin solid #c9c9c9;
+    width: 60%;
+    float: left; }
+    /* line 617, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .feed .feed-img {
+      width: 45%; }
+    /* line 620, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .feed h3 {
+      width: 50%; }
+  /* line 626, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  footer {
+    width: 90%;
+    text-align: center; }
+  /* line 630, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .footer-logo {
+    margin: 0 auto;
+    width: 40%; } }
+
+@media (min-width: 940px) {
+  /* line 639, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  a {
+    color: #4f1e5a; }
+    /* line 641, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    a:hover {
+      text-shadow: 0 0 3px #b21e49, 0 0 5px #fff; }
+  /* line 649, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  header {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; }
+  /* line 655, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  nav {
+    width: 60%; }
+    /* line 658, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    nav ul li {
+      top: 28px; }
+      /* line 660, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li i.fa {
+        display: initial;
+        color: #fff; }
+      /* line 664, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      nav ul li a {
+        color: #fff; }
+        /* line 666, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+        nav ul li a:hover {
+          text-shadow: 0 0 3px yellow, 0 0 5px #b21e49; }
+  /* line 674, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  #main-content {
+    width: 90%;
+    max-width: 1024px;
+    margin-bottom: 20px;
+    background: #fff; }
+  /* line 682, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .hero-area {
+    display: inline; }
+    /* line 684, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-story {
+      border-right: thin solid #c9c9c9;
+      display: inline;
+      width: 70%;
+      padding-right: 2%;
+      float: left;
+      margin: 0; }
+    /* line 692, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-img {
+      width: 100%; }
+    /* line 695, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .hero-area .top-info {
+      display: inline-block;
+      width: 95%;
+      float: none;
+      padding: 0; }
+  /* line 705, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .none {
+    clear: none; }
+  /* line 708, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .sidebar {
+    clear: none;
+    width: 30%;
+    float: right; }
+  /* line 713, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .btn:hover {
+    box-shadow: 0px 7px 5px 0px #cfcfd1; }
+  /* line 716, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .newsletter {
+    border-top: none; }
+  /* line 720, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed {
+    width: 100%;
+    border-right: none; }
+  /* line 724, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .feed-item {
+    width: 100%;
+    height: auto; }
+    /* line 727, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .feed-item span {
+      width: 75%;
+      float: right; }
+      /* line 730, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      .feed-item span:after {
+        clear: right; }
+      /* line 733, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      .feed-item span p {
+        display: inline-block; }
+      /* line 736, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+      .feed-item span h3 {
+        width: 100%;
+        display: inline-block;
+        font-size: 1.45em; }
+    /* line 742, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .feed-item figure {
+      display: inline-block;
+      padding: 0; }
+    /* line 746, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+    .feed-item .feed-img {
+      width: 100%;
+      max-width: 194px; }
+  /* line 753, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .team-title {
+    margin-bottom: 2%; }
+  /* line 757, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .team-description {
+    display: initial; }
+  /* line 761, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  .footer-logo img {
+    width: 30%; } }
+
+@media print {
+  /* line 777, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+    http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  /* line 786, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+  /* line 790, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  /* line 794, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+  * Don't show links that are fragment identifiers,
+  * or use the `javascript:` pseudo protocol
+  */
+  /* line 804, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  /* line 809, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /* line 819, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  thead {
+    display: table-header-group; }
+  /* line 824, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+  /* line 828, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  img {
+    max-width: 100% !important; }
+  /* line 834, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  /* line 840, C:/xampp/htdocs/indie-vine/wp-content/themes/indie-vine/style.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 
 /*# sourceMappingURL=style.css.map */

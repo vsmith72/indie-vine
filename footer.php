@@ -1,4 +1,5 @@
-      <!--  footer -->
+</div><!-- wrapper -->
+     <!--  footer -->
       <footer>
         <figure class="footer-logo">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="footer logo indie vine" width="100%">
