@@ -38,27 +38,17 @@
 
     <!-- Add your site or application content here -->
     <header>
-      <div id="logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="The Indie Vine" width="100%"></a></div>
+      <div id="logo">
+        <a href="<?php bloginfo('url'); ?>">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="The Indie Vine" width="100%">
+        </a>
+      </div>
 
       <!-- Navigation ----------------------------------->
-      <!-- TODO -- Make this a dynamic menu -->
-      <nav>
-        <ul>
-          <li>
-            <a href="/about/index.html"><i class="fa fa-users" aria-hidden="true"></i>About Us</a>
-            <ul class="subnav">
-              <li><a href="/about/faqs.html">FAQ</a></li>
-              <li><a href="/about/">Who We Are &amp; Contact</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/concerts/index.html"><i class="fa fa-music" aria-hidden="true"></i>Concerts</a>
-          </li>
-          <li>
-            <a href="/reviews/index.html"><i class="fa fa-headphones" aria-hidden="true"></i>Reviews</a>
-          </li>
-        </ul>
-      </nav>
+
+
+      <?php wp_nav_menu('nav-main'); ?>
+
       <div class="clear"></div>
 
     </header>

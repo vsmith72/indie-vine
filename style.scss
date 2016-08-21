@@ -205,7 +205,7 @@ header {
 
 
 // code from 206 master
-nav {
+.menu-main-nav-container {
   width: 100%;
   font-family: 'Antic';
   font-size: 1.25rem;
@@ -219,15 +219,19 @@ nav {
     padding-bottom: 5%;
     li {
       @include btmborder;
+      width: 100%;
       text-align:center;
       padding:15px 0;
+      color: $white;
       &:first-child {
         border-top: thin solid rgba(255, 255, 255, .5);
       }
-      i.fa {
+      li.fa {
         display: none;
+
       }
       a {
+        padding-left: 10px;
         font-size:1.125em;
         text-transform:uppercase;
         color:$white;
@@ -237,7 +241,7 @@ nav {
       }
     }
   }
-  .subnav {
+  .sub-menu {
     display:none;
   }
 }
@@ -557,13 +561,15 @@ $desktop: "min-width: 940px";
   }
 
   // Navigation =============
-  nav {
+  .menu-main-nav-container {
     width: 60%;
     float:right;
     ul li {
       display:block;
       float:right;
       padding:0 2%;
+      width: auto;
+      font-size: .65em;
       border:none;
       line-height:2em;
       position:relative;
@@ -665,16 +671,18 @@ $desktop: "min-width: 940px";
     @include center;
   }
 
-  nav {
+  .menu-main-nav-container {
     width: 60%;
     ul {
       li {
         top:28px;
-        i.fa {
+        color: $white;
+        .fa {
           display: initial;
-          color: #fff;
+
         }
         a {
+          padding-left: 10px;
           color: #fff;
           &:hover {
             text-shadow: 0 0 3px yellow, 0 0 5px $red;
