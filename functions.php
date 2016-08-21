@@ -104,13 +104,13 @@ register_sidebar(array(
 }
 
 // Register Custom Post Type
-/* function custom_post_type() {
+ function custom_post_type() {
 
   $labels = array(
-    'name'                  => _x( 'Reviews', 'Post Type General Name', 'indie_vine' ),
-    'singular_name'         => _x( 'Review', 'Post Type Singular Name', 'indie_vine' ),
-    'menu_name'             => __( 'Reviews', 'indie_vine' ),
-    'name_admin_bar'        => __( 'Reviews', 'indie_vine' ),
+    'name'                  => _x( 'Concerts', 'Post Type General Name', 'indie_vine' ),
+    'singular_name'         => _x( 'concerts', 'Post Type Singular Name', 'indie_vine' ),
+    'menu_name'             => __( 'Concerts', 'indie_vine' ),
+    'name_admin_bar'        => __( 'Concerts', 'indie_vine' ),
     'archives'              => __( 'Item Archives', 'indie_vine' ),
     'parent_item_colon'     => __( 'Parent Item:', 'indie_vine' ),
     'all_items'             => __( 'All Items', 'indie_vine' ),
@@ -134,8 +134,8 @@ register_sidebar(array(
     'filter_items_list'     => __( 'Filter items list', 'indie_vine' ),
   );
   $args = array(
-    'label'                 => __( 'Review', 'indie_vine' ),
-    'description'           => __( 'Music review post type', 'indie_vine' ),
+    'label'                 => __( 'Concerts', 'indie_vine' ),
+    'description'           => __( 'Concert post type', 'indie_vine' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
     'taxonomies'            => array( 'category', 'post_tag' ),
@@ -152,7 +152,7 @@ register_sidebar(array(
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
   );
-  register_post_type( 'review', $args );
+  register_post_type( 'Concerts', $args );
 
 }
 add_action( 'init', 'custom_post_type', 0 );
@@ -165,7 +165,7 @@ wp_enqueue_script('comment-reply');
 }
 }
 add_action('get_header', 'enable_threaded_comments');
-*/
+
 
 //FEATURED IMAGES
 if ( function_exists( 'add_theme_support' ) ) {

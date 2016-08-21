@@ -1,6 +1,15 @@
 <!-- TODO - add if is home to show latest posts and an else if not ie the review index -->
  <article class="feed-item clearfix">
-  <h4 class="feed-type"><?php the_category(' '); ?></h4>
+  <h4 class="feed-type">
+
+    <?php
+    foreach((get_the_category()) as $category) {
+      echo $category->cat_name . ' ';
+    }
+    ?>
+
+  </h4>
+
   <div>
     <figure class="feed-img">
       <?php if (has_post_thumbnail()) : ?>

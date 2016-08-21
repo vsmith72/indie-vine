@@ -38,7 +38,7 @@
 
     <!-- Add your site or application content here -->
     <header>
-      <div id="logo"><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="The Indie Vine" width="100%"></a></div>
+      <div id="logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="The Indie Vine" width="100%"></a></div>
 
       <!-- Navigation ----------------------------------->
       <!-- TODO -- Make this a dynamic menu -->
