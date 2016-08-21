@@ -104,7 +104,7 @@ register_sidebar(array(
 }
 
 // Register Custom Post Type
-function custom_post_type() {
+/* function custom_post_type() {
 
   $labels = array(
     'name'                  => _x( 'Reviews', 'Post Type General Name', 'indie_vine' ),
@@ -165,7 +165,7 @@ wp_enqueue_script('comment-reply');
 }
 }
 add_action('get_header', 'enable_threaded_comments');
-
+*/
 
 //FEATURED IMAGES
 if ( function_exists( 'add_theme_support' ) ) {

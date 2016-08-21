@@ -1,4 +1,3 @@
-<!-- TODO - add if is home to show latest post and an else if not ie the review index -->
  <section class="hero-area">
   <article class="top-story">
     <figure class="top-img">
@@ -18,3 +17,4 @@
   </article>
   <div class="clear none"></div>
 </section>
+
