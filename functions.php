@@ -93,14 +93,32 @@ add_action('init', 'set_menu_areas');
 // SIDE BARS
 if ( function_exists('register_sidebar')) {
 register_sidebar(array(
-	'id' => 'sb-right',
-	'name' => 'Right Sidebar',
-	'description' => 'Appears on pages and single posts',
-	'before_widget' => '<div id="%1$s" class="widget %2$s sb-right">',
+	'id' => 'newsletter',
+	'name' => 'Newsletter Sidebar',
+	'description' => 'Newsletter sidebar, Appears on pages and single posts',
+	'before_widget' => '<div id="%1$s" class="widget %2$s newsletter">',
 	'after_widget' => '</div>',
 	'before_title' => '<h2>',
 	'after_title' => '</h2>'
 	));
+  register_sidebar(array(
+    'id' => 'sidebar-upcoming',
+    'name' => 'Concerts Sidebar',
+    'description' => 'Concerts sidebar, Appears on pages and single posts',
+    'before_widget' => '<div id="%1$s" class="widget %2$s sidebar-upcoming">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
+  register_sidebar(array(
+    'id' => 'sidebar-faq',
+    'name' => 'FAQ\'s Sidebar',
+    'description' => 'Appears on pages and single posts',
+    'before_widget' => '<div id="%1$s" class="widget %2$s sidebar-faq">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+  ));
 }
 
 // Register Custom Post Type

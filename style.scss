@@ -127,6 +127,9 @@ $white: #fff;
 @mixin rtborder {
   border-right: thin solid $grey;
 }
+@mixin lftborder {
+  border-left: thin solid $grey;
+}
 @mixin img-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -165,7 +168,8 @@ h4 {
 
 // h1 { }
 
-// h2 { }
+h2 {
+font-size: 1.25em;}
 
 // h3 { }
 
@@ -261,7 +265,7 @@ header {
 
 // Featured News Item =========================================================
 .hero-area {
-
+  @include btmborder;
 }
 .top-story {
   width: $full-width;
@@ -289,14 +293,17 @@ header {
   padding-bottom: 6%;
 }
 .sidebar-upcoming {
-  @include btmborder;
-}
-.newsletter {
-  @include btmborder;
   @include tpborder;
-  padding-bottom: 6.75%;
+  @include btmborder;
 }
 
+//.newsletter { }
+
+// padding for the newletter box
+.padding {
+  padding-top: 6.75%;
+  padding-bottom: 6.75%;
+}
 aside {
 
   input {
@@ -316,6 +323,25 @@ aside {
   }
 }
 
+// WP SUBSCRIBE PLUGIN
+#wp-subscribe { padding: 26px; background: $purple; }
+#wp-subscribe h4.title { font-size: 22px; color: #FFFFFF; line-height: 1; text-align: center; text-transform: uppercase; margin-bottom: 0; }
+#wp-subscribe h4.title span { display: inline-block; font-weight: bold; font-size: 38px; margin-top: 15px; }
+#wp-subscribe p { color: #FFFFFF; margin: 0; text-align: center; }
+#wp-subscribe p.text { margin: 15px 0; opacity: 0.8; }
+#wp-subscribe input { border: none; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0; margin: 0; box-shadow: none; border-radius: 0; height: 45px; }
+#wp-subscribe .email-field { margin-top: 10px }
+#wp-subscribe input.email-field, #wp-subscribe input.name-field { color: #FFFFFF; background: $red; }
+#wp-subscribe input::-webkit-input-placeholder { color: inherit; opacity: 0.8; }
+#wp-subscribe input:-moz-input-placeholder { color: inherit; opacity: 0.8; }
+#wp-subscribe input::-moz-input-placeholder { color: inherit; opacity: 0.8; }
+#wp-subscribe input::-ms-input-placeholder { color: inherit; opacity: 0.8; }
+#wp-subscribe input:focus::-webkit-input-placeholder { color: transparent !important }
+#wp-subscribe input:focus::-moz-input-placeholder { color: transparent !important }
+#wp-subscribe input:focus:-moz-input-placeholder { color: transparent !important }
+#wp-subscribe input:focus::input-placeholder { color: transparent !important }
+#wp-subscribe input.submit { background: #FFFFFF; color: $red; margin-top: 20px; font-size: 18px; text-transform: uppercase; font-weight: 500; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); cursor: pointer; }
+#wp-subscribe p.footer-text { margin-top: 10px; font-size: 12px; }
 
 // New & Revies Feed Section ==================================================
 
@@ -335,7 +361,6 @@ aside {
 .feed-item {
   @include btmborder;
   padding-bottom: 5%;
-
   &:last-child{
     border: none;
   }
@@ -626,10 +651,12 @@ $desktop: "min-width: 940px";
     display: block;
     padding-left: 3%;
   }
-
+  .padding {
+    padding-top: 6.75%;
+  }
   // news and reviews
   .feed {
-
+    border-top: none;
     border-right: thin solid $grey;
     width: 60%;
     float: left;
@@ -703,7 +730,6 @@ $desktop: "min-width: 940px";
   .hero-area {
     display: inline;
     .top-story {
-      @include rtborder;
       display: inline;
       width: 70%;
       padding-right: 2%;
@@ -727,6 +753,7 @@ $desktop: "min-width: 940px";
     clear: none;
   }
   .sidebar {
+    @include lftborder;
     clear: none;
     width: 30%;
     float: right;
@@ -737,8 +764,12 @@ $desktop: "min-width: 940px";
   .newsletter {
     border-top: none;
   }
+  .padding {
+    padding-top: 0;
+  }
   // Feed Items ===============================================================
   .feed {
+    @include tpborder;
     width: $full-width;
     border-right: none;
   }

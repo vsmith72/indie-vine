@@ -9,30 +9,17 @@
           <!-- Side Bar ---------------------------------------------------------->
           <!-- TODO -- Make this a dynamic sidebar with text widgets and a newsletter form -->
           <aside class="sidebar">
-            <div class="newsletter">
-              <h2>Newsletter Signup</h2>
-              <form action="">
-                <input type="email">
-                <input class="btn" type="submit" value="Sign Up"> </form>
+            <div class="padding">
+              <?php dynamic_sidebar('newsletter'); ?>
+            </div>
               <!-- .newsletter-->
-            </div>
+
             <!-- hide on mobile version -->
-            <div class="sidebar-upcoming">
-              <h2>Upcoming Concerts</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate excepturi, minima optio reiciendis placeat repudiandae.</p>
-              <a href="#">
-                <button class="btn"><i class="fa fa-music" aria-hidden="true"></i>See All</button>
-              </a>
-            </div>
+            <?php dynamic_sidebar('sidebar-upcoming'); ?>
+
             <!-- .upcoming -->
             <!-- hide on mobile version -->
-            <div class="sidebar-faq">
-              <h2>Frequently Asked Questions</h2>
-              <p>m ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate excepturi.</p>
-              <a href="#">
-                <button class="btn"><i class="fa fa-question-circle" aria-hidden="true"></i>See All</button>
-              </a>
-            </div>
+            <?php dynamic_sidebar('sidebar-faq'); ?>
             <!-- .faq -->
           </aside>
           <!-- News/Reviews Feed Section ----------------------------------------->
