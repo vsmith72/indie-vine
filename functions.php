@@ -122,58 +122,20 @@ register_sidebar(array(
 }
 
 // Register Custom Post Type
- function custom_post_type() {
-
-  $labels = array(
-    'name'                  => _x( 'Concerts', 'Post Type General Name', 'indie_vine' ),
-    'singular_name'         => _x( 'concerts', 'Post Type Singular Name', 'indie_vine' ),
-    'menu_name'             => __( 'Concerts', 'indie_vine' ),
-    'name_admin_bar'        => __( 'Concerts', 'indie_vine' ),
-    'archives'              => __( 'Item Archives', 'indie_vine' ),
-    'parent_item_colon'     => __( 'Parent Item:', 'indie_vine' ),
-    'all_items'             => __( 'All Items', 'indie_vine' ),
-    'add_new_item'          => __( 'Add New Item', 'indie_vine' ),
-    'add_new'               => __( 'Add New', 'indie_vine' ),
-    'new_item'              => __( 'New Item', 'indie_vine' ),
-    'edit_item'             => __( 'Edit Item', 'indie_vine' ),
-    'update_item'           => __( 'Update Item', 'indie_vine' ),
-    'view_item'             => __( 'View Item', 'indie_vine' ),
-    'search_items'          => __( 'Search Item', 'indie_vine' ),
-    'not_found'             => __( 'Not found', 'indie_vine' ),
-    'not_found_in_trash'    => __( 'Not found in Trash', 'indie_vine' ),
-    'featured_image'        => __( 'Featured Image', 'indie_vine' ),
-    'set_featured_image'    => __( 'Set featured image', 'indie_vine' ),
-    'remove_featured_image' => __( 'Remove featured image', 'indie_vine' ),
-    'use_featured_image'    => __( 'Use as featured image', 'indie_vine' ),
-    'insert_into_item'      => __( 'Insert into item', 'indie_vine' ),
-    'uploaded_to_this_item' => __( 'Uploaded to this item', 'indie_vine' ),
-    'items_list'            => __( 'Items list', 'indie_vine' ),
-    'items_list_navigation' => __( 'Items list navigation', 'indie_vine' ),
-    'filter_items_list'     => __( 'Filter items list', 'indie_vine' ),
-  );
-  $args = array(
-    'label'                 => __( 'Concerts', 'indie_vine' ),
-    'description'           => __( 'Concert post type', 'indie_vine' ),
-    'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
-    'taxonomies'            => array( 'category', 'post_tag' ),
-    'hierarchical'          => true,
-    'public'                => true,
-    'show_ui'               => true,
-    'show_in_menu'          => true,
-    'menu_position'         => 5,
-    'show_in_admin_bar'     => true,
-    'show_in_nav_menus'     => true,
-    'can_export'            => true,
-    'has_archive'           => true,
-    'exclude_from_search'   => false,
-    'publicly_queryable'    => true,
-    'capability_type'       => 'page',
-  );
-  register_post_type( 'Concerts', $args );
-
+function create_custom_post_types() {
+  register_post_type( 'concerts',
+                     array(
+                       'labels' => array(
+                         'name' => __( 'Concerts' ),
+                         'singular_name' => __( 'Concert' )
+                       ),
+                       'public' => true,
+                       'has_archive' => true,
+                       'rewrite' => array( 'slug' => 'concerts' ),
+                     )
+                    );
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'create_custom_post_types' );
 
 // enable threaded comments
 function enable_threaded_comments(){
@@ -201,11 +163,12 @@ function custom_excerpt_length() {
 }
 add_filter('excerpt_length','custom_excerpt_length');
 
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'indievine') . '</a>';
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+  global $post;
+  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
-
+add_filter('excerpt_more', 'new_excerpt_more');
 
 // add custom gravatar
     add_filter( 'avatar_defaults', 'newgravatar' );

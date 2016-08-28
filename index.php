@@ -7,21 +7,7 @@
       <?php endwhile; // end of the loop ?>
         <?php wp_reset_query(); // resets the altered query back to the original ?>
           <!-- Side Bar ---------------------------------------------------------->
-          <!-- TODO -- Make this a dynamic sidebar with text widgets and a newsletter form -->
-          <aside class="sidebar">
-            <div class="padding">
-              <?php dynamic_sidebar('newsletter'); ?>
-            </div>
-              <!-- .newsletter-->
-
-            <!-- hide on mobile version -->
-            <?php dynamic_sidebar('sidebar-upcoming'); ?>
-
-            <!-- .upcoming -->
-            <!-- hide on mobile version -->
-            <?php dynamic_sidebar('sidebar-faq'); ?>
-            <!-- .faq -->
-          </aside>
+          <?php get_sidebar(); ?>
           <!-- News/Reviews Feed Section ----------------------------------------->
           <section class="feed">
             <h2>Recent News &amp; Reviews</h2>

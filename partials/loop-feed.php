@@ -21,6 +21,7 @@
     <span>
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <p><?php the_excerpt(); ?></p>
+      <a href="<?php echo get_permalink(); ?>"><button class="btn-more">Full Story</button></a>
       <!-- TODO - need a read more button -->
     </span>
   </div>
