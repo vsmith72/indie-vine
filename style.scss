@@ -429,6 +429,25 @@ ul.feed-meta {
 }
 
 // ABOUT PAGE ================================ */
+.contact_info {
+  @include btmborder;
+  padding-bottom: 5%;
+}
+.bold {
+  font-weight: bold;
+}
+address {
+  .lable {
+    float: left;
+    display: inline;
+    margin-top: 0;
+  }
+  span {
+    float: left;
+    display: block;
+  }
+}
+
 .map-container {
   position: relative;
   padding-bottom: 75%;
@@ -443,7 +462,8 @@ ul.feed-meta {
   }
 }
 .mission{
-
+  @include btmborder;
+  padding-bottom: 5%;
 }
 .team{
 
@@ -460,13 +480,12 @@ ul.feed-meta {
   background-size: cover;
   background-repeat: no-repeat;
   width: 40%;
-  padding-bottom: 40%;
   float: left;
   margin-right: 20px;
   border: thin solid #ccc;
 }
 .team-name{
-
+  padding-top: 0;
 }
 .team-title{
   margin: 0;
@@ -556,6 +575,16 @@ ul.feed-meta {
     }
   }
 }
+
+// FAQ ========================================================================
+.faq_feed {
+  @include btmborder;
+  padding-bottom: 5%;
+  &::last-child {
+    border: none;
+  }
+}
+
 // Footer =====================================================================
 
 footer {
@@ -743,6 +772,11 @@ $desktop: "min-width: 940px";
       width: 50%;
     }
   }
+ // ABout us
+
+  .team-description{
+    display: initial;
+  }
 
   //footer
   footer{
@@ -919,9 +953,6 @@ $desktop: "min-width: 940px";
   .team-title{
     margin-bottom: 2%;
 
-  }
-  .team-description{
-    display: initial;
   }
   //footer
   .footer-logo img{

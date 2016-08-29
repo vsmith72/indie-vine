@@ -71,7 +71,7 @@ function enqueue_scripts() {
     wp_enqueue_script( 'html5-shim' );
 
     /** REGISTER HTML5 OtherScript.js **/
-    wp_register_script( 'my-scripts', THEME_DIR . '/my-scripts.js', array( 'jquery' ), '1', false );
+    wp_register_script( 'my-scripts', THEME_DIR . '/js/main.js', array( 'jquery' ), '1', false );
     wp_enqueue_script( 'my-scripts' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
@@ -123,6 +123,7 @@ register_sidebar(array(
 
 // Register Custom Post Type
 function create_custom_post_types() {
+  // Concerts
   register_post_type( 'concerts',
                      array(
                        'labels' => array(
@@ -132,6 +133,30 @@ function create_custom_post_types() {
                        'public' => true,
                        'has_archive' => true,
                        'rewrite' => array( 'slug' => 'concerts' ),
+                     )
+                    );
+  // Team Bios
+  register_post_type( 'team_bios',
+                     array(
+                       'labels' => array(
+                         'name' => __( 'Team Bios' ),
+                         'singular_name' => __( 'Team Bios' )
+                       ),
+                       'public' => true,
+                       'has_archive' => true,
+                       'rewrite' => array( 'slug' => 'team-bios' ),
+                     )
+                    );
+  // FAQ's
+  register_post_type( 'faq',
+                     array(
+                       'labels' => array(
+                         'name' => __( 'FAQ' ),
+                         'singular_name' => __( 'FAQ'  )
+                       ),
+                       'public' => true,
+                       'has_archive' => true,
+                       'rewrite' => array( 'slug' => 'faq' ),
                      )
                     );
 }
@@ -201,4 +226,5 @@ add_filter('excerpt_more', 'new_excerpt_more');
     }
     return $output;
     }
+
 ?>
