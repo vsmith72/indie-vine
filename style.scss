@@ -216,6 +216,9 @@ header {
   font-family: 'Antic';
   font-size: 1.25rem;
   letter-spacing: .15rem;
+  .sub-menu {
+    display: block;
+  }
   ul {
     @include center;
     width: 96%;
@@ -247,9 +250,7 @@ header {
       }
     }
   }
-  .sub-menu {
-    display:none;
-  }
+
 }
 // end master
 
@@ -842,6 +843,9 @@ $desktop: "min-width: 940px";
 
   .menu-main-nav-container {
     width: 60%;
+    .sub-menu {
+      display: block;
+    }
     ul {
       li {
         top:28px;
@@ -854,9 +858,9 @@ $desktop: "min-width: 940px";
         a {
           padding-left: 10px;
           color: #fff;
-
           &:hover {
             text-shadow: 0 0 3px yellow, 0 0 5px $red;
+
           }
         }
       }
