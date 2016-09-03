@@ -38,8 +38,9 @@ function indievine_setup() {
     add_theme_support('menus');
 
     /** Enable suppor for cutom header
-    */
-    add_theme_support( 'custom-header', $args );
+
+    add_theme_support( 'custom-header', $args )
+    ;*/
 
     /**
      * Enable support for the following post formats:
