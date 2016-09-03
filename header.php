@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/bower_components/font-awesome-cdn/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css">
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/modernizr-2.8.3.min.js"></script>
+
     <!--=== TITLE ===-->
     <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
 

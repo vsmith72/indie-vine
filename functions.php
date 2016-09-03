@@ -54,7 +54,18 @@ endif; // universaltheme_setup
 add_action( 'after_setup_theme', 'indievine_setup' );
 // END THEME SETUP
 
-
+// Custom Admin Login
+/* Load CSS for custom login page */
+function skillcrushstarter_custom_login() {
+  wp_enqueue_style( 'login_styles', get_template_directory_uri() . '/login/custom-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'skillcrushstarter_custom_login');
+// Change error message upon login
+function login_error_custom()
+{
+  return 'Are you lost?';
+}
+add_filter('login_errors', 'login_error_custom');
 // ENQUEUE STYLES
 function enqueue_styles() {
     /** REGISTER css/stlye.css **/

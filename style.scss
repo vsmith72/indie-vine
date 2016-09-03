@@ -149,8 +149,8 @@ a {
   &:visited {
     color: $purple;
   }
-  &:hover {
-
+  &:hover, .hover {
+    text-shadow: 0 0 3px yellow, 0 0 5px $red;
   }
   &:active {
 
@@ -216,9 +216,7 @@ header {
   font-family: 'Antic';
   font-size: 1.25rem;
   letter-spacing: .15rem;
-  .sub-menu {
-    display: block;
-  }
+
   ul {
     @include center;
     width: 96%;
@@ -247,6 +245,7 @@ header {
         &:visited {
           color: $white;
         }
+
       }
     }
   }
@@ -260,7 +259,6 @@ header {
   @include wiggle;
   @include center;
   background: $white;
-  padding-bottom: 10%;
   width: 96%;
 }
 
@@ -325,16 +323,19 @@ aside {
     text-transform: uppercase;
   }
 }
+.tap {
+  box-shadow: 0px 7px 5px 0px rgba(207,207,209,1);
+}
 
 // WP SUBSCRIBE PLUGIN
-#wp-subscribe { padding: 26px; background: $purple; }
+#wp-subscribe { padding: 26px; background: mix($purple, $red); }
 #wp-subscribe h4.title { font-size: 22px; color: #FFFFFF; line-height: 1; letter-spacing: .05em; text-align: center; text-transform: uppercase; margin-bottom: 0; }
 #wp-subscribe h4.title span { display: inline-block; font-weight: bold; font-size: 38px; margin-top: 15px; }
 #wp-subscribe p { color: #FFFFFF; margin: 0; text-align: center; }
 #wp-subscribe p.text { margin: 15px 0; opacity: 0.8; }
 #wp-subscribe input { border: none; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0; margin: 0; box-shadow: none; border-radius: 0; height: 45px; }
 #wp-subscribe .email-field { margin-top: 10px }
-#wp-subscribe input.email-field, #wp-subscribe input.name-field { color: #FFFFFF; background: $red; }
+#wp-subscribe input.email-field, #wp-subscribe input.name-field { color: #FFFFFF; background: mix($red, $purple, 25%); }
 #wp-subscribe input::-webkit-input-placeholder { color: inherit; opacity: 0.8; }
 #wp-subscribe input:-moz-input-placeholder { color: inherit; opacity: 0.8; }
 #wp-subscribe input::-moz-input-placeholder { color: inherit; opacity: 0.8; }
@@ -428,10 +429,14 @@ ul.feed-meta {
 .comments {
   @include tpborder;
 }
-
+#wpcomm .wc-blog-guest > .wc-comment-left .wc-comment-label {
+  background: $red !important;
+}
+#wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author a {
+  color: $red !important;
+}
 // ABOUT PAGE ================================ */
 .contact_info {
-  @include btmborder;
   padding-bottom: 5%;
 }
 .bold {
@@ -454,6 +459,7 @@ address {
   padding-bottom: 75%;
   height: 0;
   overflow: hidden;
+  border: thin solid #ccc;
   iframe {
     position: absolute;
     top: 0;
@@ -512,18 +518,21 @@ address {
   @include btmborder;
   width: 100%;
   padding-bottom: 10px;
-  &:last-child{
+  &:nth-last-of-type(2):nth-of-type(odd) {
+    border: none;}
+  &:last-of-type{
     border: none;
   }
 }
 .concert_date {
-  border: thin solid #ccc;
+  background: mix($purple, $red);
   width: 30%;
   float: left;
   margin-top: 2%;
   padding: 2% 0;
   font-size: .75em;
   font-weight: bold;
+  color: white;
   span {
     display: block;
     text-align: center;
@@ -578,11 +587,11 @@ address {
 }
 
 // FAQ ========================================================================
-.faq_feed {
+.faq-feed {
   @include btmborder;
   padding-bottom: 5%;
-  &::last-child {
-    border: none;
+  &:last-of-type {
+    border-bottom: none;
   }
 }
 
@@ -594,7 +603,6 @@ footer {
 }
 .footer-logo {
   width: $full-width;
-  padding-top: 5%;
 }
 
 //* ==========================================================================
@@ -741,7 +749,9 @@ $desktop: "min-width: 940px";
     width: 40%;
     float: right;
   }
-
+  .btn:hover {
+      box-shadow: 0px 7px 5px 0px rgba(207,207,209,1);
+    }
   .detail-newsletter {
     input[type='email'] {
       width: 60%;
@@ -843,9 +853,7 @@ $desktop: "min-width: 940px";
 
   .menu-main-nav-container {
     width: 60%;
-    .sub-menu {
-      display: block;
-    }
+
     ul {
       li {
         top:28px;
@@ -858,10 +866,7 @@ $desktop: "min-width: 940px";
         a {
           padding-left: 10px;
           color: #fff;
-          &:hover {
-            text-shadow: 0 0 3px yellow, 0 0 5px $red;
 
-          }
         }
       }
     }
@@ -906,9 +911,7 @@ $desktop: "min-width: 940px";
     width: 30%;
     float: right;
   }
-  .btn:hover {
-    box-shadow: 0px 7px 5px 0px rgba(207,207,209,1);
-  }
+
   .newsletter {
     border-top: none;
   }
@@ -963,11 +966,14 @@ $desktop: "min-width: 940px";
     width: 30%;
   }
   // Concerts Page ==============================================================
+
+
   .concert_info {
     width: 50%;
     float: left;
     padding-bottom: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+
   }
   .concert_date {
     border: thin solid #ccc;

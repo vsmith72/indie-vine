@@ -15,10 +15,27 @@
 <?php get_header(); ?>
 <h1>Upcoming Concerts</h1>
 <?php
-  while ( have_posts() ) : the_post();
+    $today = date('yymmdd');
+    $args = array(
+      'posts_per_page'  => 10,
+      'order'           => 'ASC',
+      'post_type'       => 'concerts',
+      'meta_query' => array(
+        array(
+          'key' => 'concert_date',
+          'value' => $today,
+          'compare' => '>=',
+        )
+      ),
+    );
+    query_posts( $args );
+
+    if( have_posts() ) : while ( have_posts() ) : the_post();
+
+
+    $concert_date = get_field('concert_date');
 
     //set the vars for the concert post type
-    $concert_date = get_field('concert_date');
     $month = get_field('month');
     $day   = get_field('day');
     $year = get_field('year');
@@ -28,13 +45,7 @@
     $venue_info = get_field('venue_info');
     $buy_tickets = get_field('buy_tickets');
 
-  //check to see if the date of the concert has passed
-    $now = date(Ymd);
-    $concert_date = get_field('concert_date');
-
-    if ( $concert_date >= $now ) {
-
-  ?>
+?>
       <article class="concert_info clearfix">
         <span class="concert_date">
           <span><?php echo $month; ?></span>
@@ -83,12 +94,12 @@
 
           ?>
 
-          <button><a href="<?php echo $buy_tickets; ?>" target="blank">Buy Tickets<i class="fa fa-external-link" aria-hidden="true"></i></a></button>
+          <button class="btn"><a href="<?php echo $buy_tickets; ?>" target="blank">Buy Tickets<i class="fa fa-external-link" aria-hidden="true"></i></a></button>
         </span>
       </article>
-    <?php } ?>
-    <?php endwhile; ?>
 
+    <?php endwhile; ?>
+<?php endif; ?>
 
 
 

@@ -23,8 +23,8 @@ $faq_title = get_field('faq_title');
 $faq_content = get_field('faq_content');
 ?>
 
-<article class="faq_feed clearfix">
-  <div class="faq_detail">
+<article class="faq-feed clearfix">
+  <div class="faq-detail">
     <h2><?php echo $faq_title; ?></h2>
     <span class="day"><?php echo $faq_content; ?></span>
     <p class="bold">Email:&nbsp;<a href="mailto:<?php echo get_bloginfo('admin_email'); ?>"><?php echo get_bloginfo('admin_email'); ?></a></p>
