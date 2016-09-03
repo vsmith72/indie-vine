@@ -1,3 +1,19 @@
+/*
+ * Theme Name: Indie Vine
+ * Theme URI: http://vanessa-smith.com/
+ * Description: A custom theme designed for maximum impact.
+ * Author: Vanessa Smith
+ * Text Domain: indie-vine
+ * Domain Path: /languages
+ * Author URI: http://vanessa-smith.com/
+ * Version: 1.0
+ * Tags: music blog
+ * .
+ * This theme is Copyright Vanessa Smith 2016. All Rights Reserved
+ * Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * .
+*/
 //! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 //
@@ -435,6 +451,10 @@ ul.feed-meta {
 #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author a {
   color: $red !important;
 }
+#wpcomm .wpdiscuz-subscribe-form-button input[type="submit"] {
+  background: mix($purple, $red);
+  color: white;
+}
 // ABOUT PAGE ================================ */
 .contact_info {
   padding-bottom: 5%;
@@ -600,10 +620,15 @@ address {
 footer {
   @include center;
   width: 70%;
+  .copyright p {
+    text-align: center;
+    color: white;
+  }
 }
 .footer-logo {
   width: $full-width;
 }
+
 
 //* ==========================================================================
 //Helper classes

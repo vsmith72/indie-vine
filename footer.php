@@ -4,7 +4,9 @@
         <figure class="footer-logo">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="footer logo indie vine" width="100%">
         </figure>
-        <?php wp_nav_menu('nav-footer'); ?>
+        <div class="copyright">
+          <p>Indie Vine desiged and developed by Vanessa Smith <?php echo indie_vine_copyright(); ?>.</p>
+        </div><!-- end copyright -->
       </footer>
 
       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
